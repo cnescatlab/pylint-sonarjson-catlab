@@ -1,5 +1,7 @@
 # pylint-sonarjson-catlab
 
+This project is a fork of [pylint-sonarjson](https://github.com/omegacen/pylint-sonarjson), which is not maintained anymore.
+
 A PyLint plugin that can output to [SonarQube-importable JSON](https://docs.sonarqube.org/latest/analysis/generic-issue/)
 with configurable issue severity, effort, and type. 
 

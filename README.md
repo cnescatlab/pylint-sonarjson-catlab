@@ -1,4 +1,6 @@
-# pylint-sonarjson
+# pylint-sonarjson-catlab
+
+This project is a fork of [pylint-sonarjson](https://github.com/omegacen/pylint-sonarjson), which is not maintained anymore.
 
 A PyLint plugin that can output to [SonarQube-importable JSON](https://docs.sonarqube.org/latest/analysis/generic-issue/)
 with configurable issue severity, effort, and type. 
@@ -6,14 +8,14 @@ with configurable issue severity, effort, and type.
 This is useful because when importing PyLint's 
 [parsable output](https://pylint.pycqa.org/en/latest/user_guide/output.html#output-options)
 via [SonarQube mechanism for third-party issues](https://docs.sonarqube.org/latest/analysis/external-issues/)
-all the severities are set to `MAJOR`. With `pylint-sonarjson` you can configure the
+all the severities are set to `MAJOR`. With `pylint-sonarjson-catlab` you can configure the
 issue severity per PyLint message ID, and import that as generic JSON in SonarQube.
 
 ## Usage
 
 ```
 $ pylint \
-    --load-plugins=pylint_sonarjson \
+    --load-plugins=pylint_sonarjson_catlab \
     --output-format=sonarjson \
     --sonar-rules=<msg_id>:<severity>[:<effort>[:<type>]],... \
     --sonar-default-severity=<severity> \
@@ -49,7 +51,7 @@ For example:
 
 ```
 $ pylint \
-    --load-plugins=pylint_sonarjson \
+    --load-plugins=pylint_sonarjson_catlab \
     --output-format=sonarjson \
     --sonar-rules=C0114:INFO:10,C0328:MINOR:1 \
     my_file.py
@@ -82,13 +84,13 @@ Output:
 This output, when saved to a file, can be imported into SonarQube as follows:
 
 ```
-$ sonar-scanner -Dsonar.externalIssuesReportPaths=<path_to_pylint_sonarjson_log>
+$ sonar-scanner -Dsonar.externalIssuesReportPaths=<path_to_pylint_sonarjson_catlab_log>
 ```
 
 ## Installation
 
 ```
-pip install pylint-sonarjson
+pip install pylint-sonarjson_catlab
 ```
 
 ## Configuration via pylintrc or pyproject.toml
@@ -102,7 +104,7 @@ command line option:
 ```
 [MAIN]
 
-load-plugins=pylint_sonarjson
+load-plugins=pylint_sonarjson_catlab
 
 
 [REPORTS]

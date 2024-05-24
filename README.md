@@ -2,6 +2,8 @@
 
 This project is a fork of [pylint-sonarjson](https://github.com/omegacen/pylint-sonarjson), which is not maintained anymore.
 
+With authorization of the original owners, we are now pushing updates on PyPI begining at pylint-sonarjson 2.0.0.
+
 A PyLint plugin that can output to [SonarQube-importable JSON](https://docs.sonarqube.org/latest/analysis/generic-issue/) with configurable issue severity, effort, and type.
 
 This is useful because when importing PyLint's [parsable output](https://pylint.pycqa.org/en/latest/user_guide/output.html#output-options) via [SonarQube mechanism for third-party issues](https://docs.sonarqube.org/latest/analysis/external-issues/) all the severities are set to `MAJOR`. With `pylint-sonarjson-catlab` you can configure the issue severity per PyLint message ID, and import that as generic JSON in SonarQube.
